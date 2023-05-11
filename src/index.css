@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main > div {
+  height: 100%;
+  overflow-y: overlay;
+  width: 40%;
+}
+
+.item_list {
+  background-color: #eee;
+  margin: 1rem 0 1rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.image_only {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_only h2 {
+  text-transform: uppercase;
+  color: #eee;
+  background-color: darkgreen;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
+.image_only img {
+  user-select: none;
+  pointer-events: none;
+  max-width: 350px;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.details .body {
+  background-color: #eee;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 1px 1px 3px 15px;
+}
+
+.card_body h2 {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.moves .box, .abilities .box  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.abilities .box .item {
+  background: mediumseagreen;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.3rem;
+}
+
+.moves .box .item {
+  background: lemonchiffon;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.card_header {
+  text-align: center;
+}
+
+.card_header h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  gap: 15px;
+}
+.pagination button {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  border: none;
+  background: bisque;
+}
+
+@media (max-width: 800px) {
+  .details .body {
+    width: 100%;
+  }
+  .pagination {
+    gap: 5px;
+  }
 }
